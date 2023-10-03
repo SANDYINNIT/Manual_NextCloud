@@ -29,6 +29,7 @@ For each project `vagrant` uses a directory, as an example we can create the `ex
 
 The project configuration is written to the `Vagrantfile` file which we can create directly with the `vagrant init <box>` command pointing to one of the MVs found in `Vagrant Cloud`.
 
+**Do not do it if you already have `Vagrantfile` in the folder, just go to the next 2 step**
 ```console
 [alumne@elpuig example]$ vagrant init ubuntu/jammy64
 A `Vagrantfile` has been placed in this directory. You are now
@@ -322,3 +323,8 @@ chown -R root:www-data .
 ```
 
 And then afterwards you'll need the IP of your vagrant MV, by putting it into google as a link you'll be able to go to your next cloud server for example.
+
+# Downloading Server
+
+go to either NextCloud or OwnCloud to download one of the servers. https://owncloud.com/download-server/
+
