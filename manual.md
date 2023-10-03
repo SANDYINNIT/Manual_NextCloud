@@ -1,3 +1,10 @@
+1. [Introducció a Vagrant (Ingles)](https://github.com/SANDYINNIT/Manual_NextCloud/blob/main/manual.md#introducci%C3%B3-a-vagrant-ingles)
+2. [Prepare the MV once created (NOT REALLY IMPORTANT)](https://github.com/SANDYINNIT/Manual_NextCloud/blob/main/manual.md#prepare-the-mv-once-created-not-really-imporant)
+3. [Installation of apache 2, mysql and some libraries in the container](https://github.com/SANDYINNIT/Manual_NextCloud/blob/main/manual.md#installation-of-apache2-mysql-and-some-libraries-in-the-container)
+4. [Installation and configuration of clouds](https://github.com/SANDYINNIT/Manual_NextCloud/blob/main/manual.md#installation-and-configuration-of-clouds)
+5. [MySQL configration](https://github.com/SANDYINNIT/Manual_NextCloud/blob/main/manual.md#mysql-configuration)
+6. [Creation of DATABASE](https://github.com/SANDYINNIT/Manual_NextCloud/blob/main/manual.md#creation-of-the-database)
+
 # Introducció a Vagrant (Ingles)
 
 `Vagrant` is a free tool for creating and working with development environments. These development environments are supported on some virtualization tool such as `VirtualBox`, `libvirt` or `Docker`, so in practice `Vagrant` will allow us to define our infrastructure in a `Vagrantfile` file.
@@ -179,6 +186,7 @@ config.vm.network "private_network", type: "dhcp"
 # Installation and configuration of clouds
 
 To install a cloud we must download its code and follow the generic application installation manual.
+We had downloaded it from https://nextcloud.com/install/#instructions-server
 
 To sum up:
 
