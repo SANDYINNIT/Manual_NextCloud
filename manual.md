@@ -145,7 +145,7 @@ To make the apache server of the MV visible at http://localhost:8080 of the phys
 # NOTE: This will enable public access to the opened port
 config.vm.network "forwarded_port", guest: 80, host: 8080
 ```
-**PRIVATE NETWORK**
+**PRIVATE NETWORK:**
 
 It is also possible to add a new network interface to the MV on a private network other than the network the host computer is connected to.
 
@@ -266,11 +266,11 @@ From a terminal with a user without privileges we must be able to connect by ent
 alumne@elpuig:~$ mysql -u usuario -p
 ```
 
-**Extra: allow connection from a remote machine**
+**Extra: allow connection from a remote machine:**
 
 For security, MySQL does not allow connections from other than localhost by default. If we want to change this behavior we must create another user who will access from a remote machine and will be identified by the user name and his IP. So there can be different users called `usuario` who connect from different machines.
 
-**We change the default access to our machine**
+**We change the default access to our machine:**
 
 We allow access from any computer to our database.
 
@@ -289,7 +289,7 @@ bind-address = 0.0.0.0
 systemctl restart mysql
 ```
 
-**Creation of a user to access from a remote machine**
+**Creation of a user to access from a remote machine:**
 
 To access from a remote machine, we should create a new user identified by the username and the IP of the machine from which it will access.
 
