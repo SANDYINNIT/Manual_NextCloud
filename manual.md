@@ -312,3 +312,5 @@ cd /var/www/html
 chmod -R 775 .
 chown -R root:www-data .
 ```
+
+And then afterwards you'll need the IP of your vagrant MV, by putting it into google as a link you'll be able to go to your next cloud server for example.
