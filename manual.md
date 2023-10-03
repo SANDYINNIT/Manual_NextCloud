@@ -327,4 +327,3 @@ And then afterwards you'll need the IP of your vagrant MV, by putting it into go
 # Downloading Server
 
 go to either NextCloud or OwnCloud to download one of the servers. https://owncloud.com/download-server/
-
