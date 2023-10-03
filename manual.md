@@ -111,7 +111,7 @@ The `vagrant status` command will show us information about the state of our MVs
 
 When the MVs are no longer needed they can be deleted with `vagrant destroy`.
 
-### Prepare the MV once created
+### Prepare the MV once created (NOT REALLY IMPORANT)
 
 Once the MV is created from the official image, it will need to be prepared in some way to fulfill the function expected by the user.
 
@@ -130,7 +130,7 @@ SHELL
 
 The `apache` web server will be installed automatically when creating the environment, although without adding a redirect for a port or a new interface it will still not be possible to access the web server from our machine.
 
-### Port forwarding
+**PORT FORWARDING:**
 
 The easiest way to access a service, such as our Apache server, running on the MV is to forward traffic from a port on our physical machine to the MV.
 
@@ -145,7 +145,7 @@ To make the apache server of the MV visible at http://localhost:8080 of the phys
 # NOTE: This will enable public access to the opened port
 config.vm.network "forwarded_port", guest: 80, host: 8080
 ```
-### Private network
+**PRIVATE NETWORK**
 
 It is also possible to add a new network interface to the MV on a private network other than the network the host computer is connected to.
 
@@ -266,10 +266,12 @@ From a terminal with a user without privileges we must be able to connect by ent
 alumne@elpuig:~$ mysql -u usuario -p
 ```
 
-## Extra: allow connection from a remote machine
+**Extra: allow connection from a remote machine**
+
 For security, MySQL does not allow connections from other than localhost by default. If we want to change this behavior we must create another user who will access from a remote machine and will be identified by the user name and his IP. So there can be different users called `usuario` who connect from different machines.
 
-### We change the default access to our machine
+**We change the default access to our machine**
+
 We allow access from any computer to our database.
 
 ``` console
@@ -287,7 +289,8 @@ bind-address = 0.0.0.0
 systemctl restart mysql
 ```
 
-### Creation of a user to access from a remote machine
+**Creation of a user to access from a remote machine**
+
 To access from a remote machine, we should create a new user identified by the username and the IP of the machine from which it will access.
 
 ``` console
