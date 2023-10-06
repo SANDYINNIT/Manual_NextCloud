@@ -327,3 +327,93 @@ And then afterwards you'll need the IP of your vagrant MV, by putting it into go
 # Downloading Server
 
 go to either NextCloud or OwnCloud to download one of the servers. https://owncloud.com/download-server/
+
+**_____________________________**
+# Steps by steps to download OwnCloud
+
+Step 1:
+
+``` console
+vagrant up vagrant up --provider=virtualbox
+```
+``` console
+vagrant ssh
+```
+
+Step 2:
+
+``` console
+sudo apt update
+sudo apt upgrade
+```
+
+Step 3:
+
+``` console
+sudo apt install -y mysql-server
+sudo apt install -y php libapache2-mod-php
+```
+
+Step 4:
+
+``` console
+sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
+
+sudo systemctl restart apache2
+```
+
+Step 5:
+
+**After doing this command scroll all the way up to do the DATABASE stuff.**
+
+``` console
+sudo mysql
+```
+afterwards
+``` console
+mysql -u usuario -p
+```
+
+Step 6:
+
+In this part download the server for owncloud and then move it to /var/www/html/, to do this:
+**somehow firstly go all the way back through ``cd``**
+
+``` console
+cd vagrant
+ls - to check the name
+sudo mv owncloud.zip /var/www/html/
+cd /var/www/html/
+```
+
+Step 7:
+
+``` console
+sudo apt install zip
+ls - to check the name
+sudo unzip owncloud.zip
+sudo rm -rf index.html
+sudo rm -rf owncloud.zip
+```
+
+Step 8:
+
+``` console
+sudo chmod -R 775 .
+sudo chown -R root:www-data .
+exit ```
+
+Step 9:
+
+The drill is to do ``vagrant halt`` and that (dont forget to change the VagrantFile ip and stuff) and then ``vagrant up (etc)`` and do ``vagrant ssh``
+
+``` console
+sudo apt install -y php libapache2-mod-php
+
+sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
+
+sudo systemctl restart apache2
+
+ip -c a
+```
+- **use the ip to get into the website**
