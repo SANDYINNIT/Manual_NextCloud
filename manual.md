@@ -417,3 +417,16 @@ sudo systemctl restart apache2
 ip -c a
 ```
 - **use the ip to get into the website**
+
+``` console
+sudo apt-get remove php-common
+
+sudo apt install php7.4 php7.4-intl php7.4-mysql php7.4-mbstring \
+       php7.4-imagick php7.4-igbinary php7.4-gmp php7.4-bcmath \
+       php7.4-curl php7.4-gd php7.4-zip php7.4-imap php7.4-ldap \
+       php7.4-bz2 php7.4-ssh2 php7.4-common php7.4-json \
+       php7.4-xml php7.4-dev php7.4-apcu php7.4-redis \
+       libsmbclient-dev php-pear php-phpseclib
+
+sudo update-alternatives --config php
+```
