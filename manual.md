@@ -226,3 +226,4 @@ config.vm.network "forwarded_port", guest: 80, host: 8080
 # your network.
 config.vm.network "public_network"
 ```
+
